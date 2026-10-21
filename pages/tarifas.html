@@ -1,97 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="description"
+        content="Consulta las tarifas de alquiler de bicicletas y recorridos guiados de Rueda Libre en Medellín.">
+
+    <title>Tarifas | Rueda Libre Medellín</title>
+
     <style>
-        table{
-            border-collapse: collapse;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        th, td {
-            border: 1px solid;
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8f5;
+            color: #26352b;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #176b3b;
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: #176b3b;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #176b3b;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            color: #176b3b;
             padding: 10px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd9cd;
+            padding: 12px;
             text-align: center;
         }
-        main{
-            display: flex;
-            justify-content: space-evenly;
+
+        thead {
+            background-color: #176b3b;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e8f5e9;
+        }
+
+        .precio {
+            font-weight: bold;
+            color: #176b3b;
+        }
+
+        .nota {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #176b3b;
+            color: white;
+            padding: 10px 18px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #176b3b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            main {
+                width: 95%;
+            }
+
+            section {
+                padding: 10px;
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 500px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <section id="tabla1">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3" class="first left">Tipo de bicicleta</th>
-                        <th colspan="3" class="first left">1 Hora</th>
-                        <th colspan="3" class="first left">Medio día (4 horas)</th>
-                        <th colspan="3" class="first right left">Día completo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="3" class="left">Urbana</td>
-                        <td colspan="3" class="left">$10.000</td>
-                        <td colspan="3" class="left">$30.000</td>
-                        <td colspan="3" class="right left">$50.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="left">Montaña</td>
-                        <td colspan="3" class="left">$15.000</td>
-                        <td colspan="3" class="left">$45.000</td>
-                        <td colspan="3" class="right left">$70.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="last left">Eléctrica</td>
-                        <td colspan="3" class="last left">$25.000</td>
-                        <td colspan="3" class="last left">$70.000</td>
-                        <td colspan="3" class="last right left">$110.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="tabla2">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3">Recorrido</th>
-                        <th colspan="3">Distancia</th>
-                        <th colspan="3">Duración</th>
-                        <th colspan="3">Nivel</th>
-                        <th colspan="3">Precio por persona</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="3">Río y parques</td>
-                        <td colspan="3">12 km</td>
-                        <td colspan="3">2 h</td>
-                        <td colspan="3">Fácil</td>
-                        <td colspan="3">$45.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Sabores de barrio</td>
-                        <td colspan="3">18 km</td>
-                        <td colspan="3">3 h</td>
-                        <td colspan="3">Medio</td>
-                        <td colspan="3">$60.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Reto Las Palmas</td>
-                        <td colspan="3">25 km</td>
-                        <td colspan="3">4 h</td>
-                        <td colspan="3">Difícil</td>
-                        <td colspan="3">$85.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-</body>
 
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo.png"
+                alt="Logo de Rueda Libre"
+                width="100">
+        </a>
+
+        <h1>Nuestras tarifas</h1>
+
+        <p>Encuentra la bicicleta y el recorrido ideal para ti.</p>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="#alquiler">Alquiler</a>
+            <a href="#recorridos">Recorridos guiados</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="alquiler">
+            <h2>Tarifas de alquiler</h2>
+
+            <p>
+                Elige el tipo de bicicleta y el tiempo que quieres
+                disfrutar de tu recorrido.
+            </p>
+
+            <table>
+                <caption>Precios de alquiler de bicicletas</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Tipo de bicicleta</th>
+                        <th scope="col">1 hora</th>
+                        <th scope="col">Medio día (4 h)</th>
+                        <th scope="col">Día completo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Urbana</th>
+                        <td class="precio">$10.000</td>
+                        <td class="precio">$30.000</td>
+                        <td class="precio">$50.000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Montaña</th>
+                        <td class="precio">$15.000</td>
+                        <td class="precio">$45.000</td>
+                        <td class="precio">$70.000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Eléctrica</th>
+                        <td class="precio">$25.000</td>
+                        <td class="precio">$70.000</td>
+                        <td class="precio">$110.000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="nota">
+                <strong>¡Importante!</strong>
+                Todas las tarifas de alquiler incluyen casco y candado.
+            </p>
+        </section>
+
+        <section id="recorridos">
+            <h2>Tarifas de recorridos guiados</h2>
+
+            <p>
+                Descubre Medellín en bicicleta con nuestros recorridos
+                guiados. Escoge el que mejor se adapte a tu experiencia.
+            </p>
+
+            <table>
+                <caption>Precios de recorridos por persona</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Recorrido</th>
+                        <th scope="col">Distancia</th>
+                        <th scope="col">Duración</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Precio por persona</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Río y Parques</th>
+                        <td>12 km</td>
+                        <td>2 h</td>
+                        <td>Fácil</td>
+                        <td class="precio">$45.000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Sabores de Barrio</th>
+                        <td>18 km</td>
+                        <td>3 h</td>
+                        <td>Medio</td>
+                        <td class="precio">$60.000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Reto Las Palmas</th>
+                        <td>25 km</td>
+                        <td>4 h</td>
+                        <td>Difícil</td>
+                        <td class="precio">$85.000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="nota">
+                <strong>Días de salida:</strong>
+                sábados y domingos a las 7:00 a. m.
+            </p>
+
+            <h2>¿Qué debes llevar?</h2>
+
+            <p>Para disfrutar el recorrido, te recomendamos llevar:</p>
+
+            <ul>
+                <li>Ropa cómoda.</li>
+                <li>Agua para mantenerte hidratado.</li>
+                <li>Protector solar.</li>
+                <li>Documento de identidad.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>¿Quieres reservar?</h2>
+
+            <p>
+                Si ya elegiste tu bicicleta o recorrido, contáctanos
+                para consultar la disponibilidad.
+            </p>
+
+            <a class="boton"
+                href="mailto:hola@ruedalibre.example">
+                Escríbenos por correo
+            </a>
+
+            <p>
+                <a href="../index.html">Volver a la página de inicio</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Rueda Libre - Alquiler de bicicletas en Medellín</p>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </footer>
+
+</body>
 </html>
