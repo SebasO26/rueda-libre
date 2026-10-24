@@ -9,178 +9,10 @@
     <meta name="description"
         content="Consulta las tarifas de alquiler de bicicletas y recorridos guiados de Rueda Libre en Medellín.">
 
+    <link rel="stylesheet" href="css/styles.css">
+
     <title>Tarifas | Rueda Libre Medellín</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f8f5;
-            color: #26352b;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header img {
-            width: 100px;
-            height: auto;
-        }
-
-        header h1 {
-            color: #16834a;
-            font-size: 38px;
-            margin: 10px 0;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: #16834a;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            width: 90%;
-            max-width: 1000px;
-            margin: 25px auto;
-        }
-
-        section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: #176b3b;
-            margin-bottom: 10px;
-        }
-
-        section p {
-            margin-bottom: 15px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        caption {
-            font-size: 20px;
-            font-weight: bold;
-            color: #176b3b;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th,
-        td {
-            border: 1px solid #cbd9cd;
-            padding: 12px;
-            text-align: center;
-        }
-
-        thead {
-            background-color: #176b3b;
-            color: white;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #e8f5e9;
-        }
-
-        .precio {
-            font-weight: bold;
-            color: #176b3b;
-        }
-
-        .nota {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        ul {
-            padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .boton {
-            display: inline-block;
-            background-color: #16834a;
-            color: white;
-            padding: 10px 18px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .boton:hover {
-            background-color: #104d2a;
-        }
-
-        .tarifas {
-            background-color: #176b3b;
-            color: white;
-        }
-
-        footer {
-            background-color: #176b3b;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: white;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-
-            main {
-                width: 95%;
-            }
-
-            section {
-                padding: 10px;
-                overflow-x: auto;
-            }
-
-            table {
-                min-width: 500px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -202,7 +34,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="pagina-tarifas">
 
         <section id="alquiler">
             <h2>Tarifas de alquiler</h2>
@@ -307,7 +139,7 @@
                 sábados y domingos a las 7:00 a. m.
             </p>
 
-            <h2>¿Qué debes llevar?</h2>
+            <h3>¿Qué debes llevar?</h3>
 
             <p>Para disfrutar el recorrido, te recomendamos llevar:</p>
 

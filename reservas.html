@@ -8,154 +8,10 @@
 
     <meta name="description"
         content="Consulta cómo contactar a Rueda Libre y nuestros horarios de atención para reservar una bicicleta en Medellín.">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Reservas | Rueda Libre</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f8f5;
-            color: #26352b;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header img {
-            width: 100px;
-            height: auto;
-        }
-
-        header h1 {
-            color: #16834a;
-            font-size: 38px;
-            margin: 10px 0;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: #16834a;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            width: 85%;
-            max-width: 850px;
-            margin: 30px auto;
-        }
-
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: #176b3b;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        .contacto {
-            background-color: #e8f5e9;
-            padding: 18px;
-            border-radius: 8px;
-        }
-
-        .contacto a {
-            color: #176b3b;
-            font-weight: bold;
-        }
-
-        dl {
-            margin-top: 15px;
-        }
-
-        dt {
-            color: #176b3b;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        dd {
-            margin-left: 15px;
-        }
-
-        .boton {
-            display: inline-block;
-            background-color: #16834a;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        .boton:hover {
-            background-color: #104d2a;
-        }
-
-        footer {
-            background-color: #176b3b;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        footer a {
-            color: white;
-        }
-
-        .reservas {
-            background: #176b3b;
-            color: white;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-
-            main {
-                width: 92%;
-            }
-
-            section {
-                padding: 18px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -177,7 +33,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="pagina-reservas">
 
         <section>
             <h2>¿Quieres reservar?</h2>
@@ -188,7 +44,7 @@
                 para consultar la disponibilidad, los precios y las rutas.
             </p>
 
-            <div class="contacto">
+            <address class="contacto">
                 <p>
                     <strong>Correo de contacto:</strong>
                     <a href="mailto:ruedalibre@gmail.com">
@@ -201,7 +57,7 @@
                     Próximamente tendremos un formulario para facilitar
                     tus reservas.
                 </p>
-            </div>
+            </address>
 
             <a class="boton" href="mailto:ruedalibre@gmail.com">
                 Consultar disponibilidad

@@ -1,0 +1,309 @@
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f5;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    color: #16834a;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+/* Navegación */
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #16834a;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+
+main {
+    width: 90%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #176b3b;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #287747;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Botones */
+
+.boton {
+    display: inline-block;
+    background-color: #16834a;
+    color: #ffffff;
+    padding: 10px 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #104d2a;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #176b3b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/* =========================
+   PÁGINA DE INICIO
+========================= */
+
+.portada {
+    background-color: #dcefe1;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.portada img {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.portada h2 {
+    font-size: 30px;
+}
+
+.imagen-bici,
+.imagen-ruta {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.beneficios {
+    background-color: #e8f5e9;
+}
+
+#encuentranos {
+    background-color: #dcefe1;
+}
+
+#encuentranos a {
+    color: #176b3b;
+}
+
+/* Enlaces de navegación activos */
+
+.inicio,
+.reservas,
+.tarifas {
+    background-color: #176b3b;
+    color: #ffffff;
+}
+
+/* =========================
+   PÁGINA DE RESERVAS
+========================= */
+
+main.pagina-reservas {
+    max-width: 850px;
+}
+
+.contacto {
+    background-color: #e8f5e9;
+    padding: 18px;
+    border-radius: 8px;
+    font-style: normal;
+}
+
+.contacto a {
+    color: #176b3b;
+    font-weight: bold;
+}
+
+dl {
+    margin-top: 15px;
+}
+
+dt {
+    color: #176b3b;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+dd {
+    margin-left: 15px;
+}
+
+/* =========================
+   PÁGINA DE TARIFAS
+========================= */
+
+main.pagina-tarifas {
+    max-width: 1000px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    color: #176b3b;
+    padding: 10px;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #cbd9cd;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: #176b3b;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8f5e9;
+}
+
+.precio {
+    font-weight: bold;
+    color: #176b3b;
+}
+
+.nota {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* =========================
+   DISEÑO RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .portada img {
+        width: 100%;
+    }
+
+    main.pagina-inicio section {
+        width: auto;
+        margin: 15px;
+        padding: 18px;
+    }
+
+    main.pagina-reservas {
+        width: 92%;
+    }
+
+    main.pagina-tarifas {
+        width: 95%;
+    }
+
+    main.pagina-tarifas section {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    main.pagina-tarifas table {
+        min-width: 500px;
+    }
+}
