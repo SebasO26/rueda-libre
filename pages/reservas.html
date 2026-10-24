@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,7 +25,7 @@
         }
 
         header {
-            background-color: white;
+            background-color: #ffffff;
             text-align: center;
             padding: 20px;
         }
@@ -35,28 +36,19 @@
         }
 
         header h1 {
-            color: #176b3b;
+            color: #16834a;
+            font-size: 38px;
             margin: 10px 0;
         }
 
         nav {
-            background-color: #176b3b;
-            padding: 12px;
-        }
-
-        nav ul {
-            list-style: none;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline-block;
-            margin: 5px 15px;
+            margin-top: 10px;
         }
 
         nav a {
-            color: white;
+            color: #16834a;
             text-decoration: none;
+            margin: 10px;
         }
 
         nav a:hover {
@@ -112,7 +104,7 @@
 
         .boton {
             display: inline-block;
-            background-color: #176b3b;
+            background-color: #16834a;
             color: white;
             padding: 10px 18px;
             border-radius: 5px;
@@ -129,6 +121,7 @@
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: 20px;
         }
 
         footer p {
@@ -139,17 +132,27 @@
             color: white;
         }
 
+        .reservas {
+            background: #176b3b;
+            color: white;
+        }
+
         @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
             main {
                 width: 92%;
             }
 
             section {
                 padding: 18px;
-            }
-
-            nav li {
-                margin: 5px 8px;
             }
         }
     </style>
@@ -160,21 +163,19 @@
     <header>
         <a href="../index.html">
             <img src="../img/logo.png"
-                alt="Logo de Rueda Libre"
-                width="100">
+                alt="Logo de Rueda Libre">
         </a>
 
         <h1>Reserva tu bicicleta</h1>
 
         <p>¡Estamos listos para ayudarte a comenzar tu aventura!</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="tarifas.html">Tarifas y rutas</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="tarifas.html">Tarifas y rutas</a>
+            <a href="reservas.html" class="reservas">Reservas</a>
+        </nav>
+    </header>
 
     <main>
 
@@ -240,14 +241,17 @@
 
     <footer>
         <p><strong>Rueda Libre</strong></p>
+
         <p>
             Correo:
             <a href="mailto:ruedalibre@gmail.com">
                 ruedalibre@gmail.com
             </a>
         </p>
+
         <p>© 2026 Rueda Libre. Todos los derechos reservados.</p>
     </footer>
 
 </body>
+
 </html>
