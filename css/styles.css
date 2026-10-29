@@ -105,34 +105,11 @@ section {
    4. SERVICIOS
 ========================= */
 
-.servicios-cards {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+.cards {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     align-items: stretch;
-}
-
-.card {
-    min-width: 0;
-    background-color: #f5f8f5;
-    border-radius: 0.75rem;
-    overflow: hidden;
-}
-
-.img-card {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 0 1rem 1rem;
-}
-
-.card-content h3 {
-    margin-top: 1rem;
 }
 
 /* =========================
