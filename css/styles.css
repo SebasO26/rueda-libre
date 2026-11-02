@@ -117,12 +117,13 @@ section {
 ========================= */
 
 .boton {
+    border: none;
     display: inline-block;
     background-color: #16834a;
-    color: #ffffff;
-    padding: 0.625rem 1.125rem;
     margin-top: 0.625rem;
     border-radius: 0.3125rem;
+    padding: 0.625rem 1.125rem;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -284,6 +285,11 @@ tbody tr:nth-child(even) {
     background-color: #e8f5e9;
     padding: 0.9375rem;
     border-radius: 0.5rem;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* =========================
