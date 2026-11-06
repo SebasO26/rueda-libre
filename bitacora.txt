@@ -1,30 +1,478 @@
-1.Abre la página con Live Server. En DevTools, pestaña Network, recarga la página y localiza la petición del documento. Registra en la bitácora: la URL completa, el protocolo, el host, el puerto, la ruta, el método de la petición y el código de estado.
+BITÁCORA DEL PROYECTO RUEDA LIBRE
+DÍA 1. ESTRUCTURA Y CONTENIDO DEL SITIO WEB
 
-Url completa:
-http://127.0.0.1:5500/index.html
+MiniRetos 1 al 4 – Construcción de la estructura inicial
 
-Protocolo: 
-https.
+Durante esta primera etapa inicié el proyecto Rueda Libre creando la carpeta principal con los archivos index.html, bitacora.txt y las carpetas img/ y paginas/. Inicialicé Git y conecté el proyecto con un repositorio público de GitHub para guardar los avances.
 
-host:
-localhost
+Creé la página principal utilizando HTML e incorporé la configuración básica del documento, el idioma español, la codificación de caracteres, la adaptación a dispositivos móviles, una descripción y un título.
 
-Puerto:
-5500
+Utilicé Visual Studio Code y Live Server para visualizar el sitio localmente. También aprendí a utilizar DevTools, especialmente la pestaña Network, donde realicé dos pruebas:
 
-Ruta:
-/index.html
+index.html: respuesta HTTP 200, indicando que la página cargó correctamente.
+promociones.html: respuesta HTTP 404, porque el archivo todavía no existía.
 
-Método de petición:
-Get
+Además, aprendí las funciones principales de las tecnologías web: HTML para estructurar el contenido, CSS para controlar su apariencia y JavaScript para incorporar interactividad.
 
-código de status: 
-200
+Construcción de las páginas
 
-2. Escribe en la barra de direcciones una ruta que no exista (por ejemplo, /promociones.html) y registra el código que responde el servidor y qué significa.
+Agregué a la página principal las secciones ¿Quiénes somos?, Nuestros servicios, ¿Cómo alquilar? y Encuéntranos. Incorporé textos, listas, imágenes con atributos alternativos y enlaces a Google Maps, correo electrónico y secciones internas.
 
-Al intentar ingresar a una ruta que no existe, responde con el código 404 (Not found), que significa que no puede hallar la ruta.
+Posteriormente creé dos páginas dentro de la carpeta paginas/:
 
-3. Agrega a la bitácora qué rol cumplirán HTML, CSS y JavaScript en el sitio de Rueda Libre, con un ejemplo concreto de cada uno.
+tarifas.html: incluí tablas con los precios de alquiler de bicicletas urbanas, de montaña y eléctricas, además de los recorridos guiados Río y Parques, Sabores de Barrio y Reto Las Palmas. También agregué horarios y recomendaciones.
+reservas.html: incorporé los horarios de atención, enlaces para iniciar una reserva y la estructura de navegación común del sitio.
 
-El HTML se encargará de ser el esqueleto de Rueda libre, es decir que llevará todos los items sin decorar de ésta página, el CSS se encargará de la decoración de Rueda libre, es decir que hará que la página se vea estética con los estilos y finalmente el JavaScript es el que nos ayudará con el tema de las autenticaciones, elementos e interacción con el DOM.
+Finalmente, agregué un pie de página con el nombre del negocio, correo electrónico y año.
+
+Durante este proceso aprendí a utilizar rutas relativas para conectar archivos ubicados en diferentes carpetas, por ejemplo:
+
+paginas/tarifas.html
+paginas/reservas.html
+../index.html
+../img/logo.png
+tarifas.html#recorridos
+
+Comprobé la navegación entre las tres páginas y revisé que las imágenes y los enlaces funcionaran correctamente.
+
+Resultado: el proyecto quedó organizado en tres páginas conectadas: inicio, tarifas y recorridos, y reservas.
+
+DÍA 2. ORGANIZACIÓN, FORMULARIOS Y ACCESIBILIDAD
+
+MiniRetos 5 al 8 – Construcción de Rueda Libre v0.2
+
+En esta etapa mejoré la organización interna de las tres páginas utilizando etiquetas semánticas de HTML5. Antes de modificar el código realicé esquemas para definir la distribución de los documentos.
+
+Incorporé las etiquetas:
+
+header: encabezado.
+nav: navegación.
+main: contenido principal.
+section: separación de temas.
+article: contenido independiente.
+aside: información complementaria.
+footer: pie de página.
+
+También revisé que cada documento tuviera un solo elemento main, una jerarquía correcta de títulos y enlaces funcionales.
+
+Formulario de reservas
+
+Modifiqué reservas.html para crear un formulario dividido en tres grupos:
+
+Tus datos: nombre completo, documento, correo electrónico y celular.
+Tu alquiler: fecha, tipo de bicicleta, plan, cantidad, recorrido guiado y comentarios.
+Confirmación: aceptación de políticas y botón de envío.
+
+Utilicé diferentes controles HTML, como campos de texto, correo, fecha, números, botones de opción, listas desplegables, áreas de texto y casillas de verificación.
+
+Validaciones
+
+Implementé las siguientes condiciones para controlar la información ingresada:
+
+Nombre obligatorio, con mínimo 3 caracteres.
+Documento de entre 6 y 10 números.
+Correo electrónico con formato válido.
+Celular de 10 números que comienza por 3.
+Fecha entre el 1 de noviembre y el 31 de diciembre de 2026.
+Tipo de bicicleta y plan obligatorios.
+Cantidad entre 1 y 6 bicicletas.
+Comentarios con máximo 300 caracteres.
+Aceptación obligatoria de las políticas.
+
+Realicé pruebas con datos válidos e inválidos para comprobar el funcionamiento de las restricciones.
+
+También probé la navegación mediante teclado utilizando Tab, Shift + Tab, las flechas, la barra espaciadora y Enter.
+
+Accesibilidad e identidad visual
+
+Revisé los textos alternativos de las imágenes, la jerarquía de títulos, la claridad de los enlaces, el idioma español mediante lang="es" y la navegación con teclado.
+
+Además, incorporé la paleta de colores proporcionada por el cliente:
+
+Color	Código
+Verde Ruta	#1E7A4F
+Naranja Pedal	#F39A2B
+Azul Noche	#14213D
+Crema	#FAF6EF
+Gris Asfalto	#5B6470
+
+Organicé los colores para mantener una buena legibilidad:
+
+Texto principal: Azul Noche y Gris Asfalto.
+Fondo: Crema.
+Botones principales: Verde Ruta con texto blanco.
+Botones secundarios: Naranja Pedal con texto Azul Noche.
+Enlaces y encabezados: Verde Ruta y Azul Noche.
+
+Utilicé un verificador de contraste y evité las combinaciones de texto blanco sobre naranja y naranja sobre crema en tamaños normales, debido a su contraste insuficiente.
+
+Finalmente publiqué la versión v0.2 mediante GitHub Pages y comprobé que las tres páginas, sus imágenes y sus enlaces funcionaran correctamente desde internet.
+
+Resultado: el sitio quedó organizado semánticamente, con un formulario validado, navegación accesible y su primera versión publicada.
+
+DÍA 3. IDENTIDAD VISUAL, CSS Y LANZAMIENTO
+
+MiniRetos 9 al 12 – Construcción de Rueda Libre v1.0
+
+Durante esta etapa trabajé principalmente en CSS para darle identidad visual al sitio y mejorar su presentación.
+
+Hoja de estilos e identidad de marca
+
+Creé la carpeta css/ y el archivo styles.css, que conecté con las tres páginas.
+
+Incorporé las tipografías de Google Fonts:
+
+Montserrat, grosor 700, para los títulos.
+Open Sans, grosores 400 y 600, para los textos.
+
+También creé variables CSS para los colores, las fuentes y los espacios, facilitando su reutilización y mantenimiento.
+
+Apliqué estilos generales mediante herencia y comprobé en DevTools que propiedades como font-family se heredan, mientras que margin no se transmite automáticamente a los elementos hijos.
+
+Navegación y especificidad
+
+Personalicé el menú para identificar la página actual mediante la clase activo.
+
+Durante este proceso encontré un conflicto de especificidad entre los selectores #menu a y .activo. Aprendí que los identificadores tienen mayor especificidad que las clases.
+
+Solucioné el problema utilizando #menu a.activo, sin recurrir a !important ni a estilos en línea.
+
+También incorporé los estados :hover y :focus en enlaces, botones y campos del formulario.
+
+Modelo de caja y distribución
+
+Trabajé con los conceptos de contenido, padding, border y margin, utilizando box-sizing: border-box para controlar las dimensiones de los elementos.
+
+Entre los ajustes realizados se encuentran:
+
+Centrado y limitación del ancho del contenido principal.
+Organización de servicios en tarjetas con bordes y esquinas redondeadas.
+Adaptación de imágenes al ancho disponible.
+Mejoras visuales en las tablas.
+Organización del formulario con etiquetas encima de los campos.
+Separación de los grupos del formulario.
+Distribución horizontal del menú.
+
+Utilicé la pestaña Computed de DevTools para revisar dimensiones y comparar content-box y border-box.
+
+Posicionamiento y nuevas funcionalidades
+
+En el MiniReto 12 incorporé una etiqueta con el texto "Nuevo" a la tarjeta de bicicletas eléctricas, utilizando posicionamiento CSS.
+
+También agregué un enlace de WhatsApp en las tres páginas mediante:
+
+https://wa.me/573000000000
+
+Lo configuré con posicionamiento fijo en la esquina inferior derecha para mantenerlo visible durante el desplazamiento. Comprobé que pudiera seleccionarse con el teclado y que no cubriera contenido importante.
+
+Finalmente organicé styles.css mediante comentarios y secciones: variables, estilos generales, encabezado, navegación, enlaces, botones, tarjetas, tablas, formulario, etiqueta de nuevo servicio, WhatsApp y pie de página.
+
+Eliminé reglas repetidas y estilos que ya no eran necesarios.
+
+Pruebas y publicación
+
+Antes del lanzamiento revisé:
+
+Consistencia del menú y del pie de página.
+Funcionamiento de botones y enlaces.
+Carga de imágenes y tipografías.
+Validaciones del formulario.
+Estados visuales de enlaces y campos.
+Visibilidad del acceso a WhatsApp.
+Ausencia de errores 404 en Network.
+Navegación completa mediante teclado.
+Aplicación correcta de los estilos CSS.
+
+Finalmente publiqué Rueda Libre v1.0 mediante GitHub Pages y actualicé la descripción del repositorio.
+
+DÍA 4. FLEXBOX, GRID Y DISEÑO RESPONSIVE
+
+MiniRetos 1 al 4 – Evolución hacia Rueda Libre v1.5
+
+Durante esta jornada trabajé en la organización de los elementos mediante Flexbox y Grid, además de adaptar el sitio a diferentes tamaños de pantalla.
+
+MiniReto 1. Un encabezado que se acomoda – Flexbox
+
+Modifiqué el archivo compartido css/styles.css para organizar el encabezado, el menú y el pie de página.
+
+Utilicé:
+
+display: flex.
+justify-content: space-between.
+align-items: center.
+gap.
+flex-wrap: wrap.
+
+El encabezado quedó distribuido con el nombre de Rueda Libre en un extremo y el menú en el otro. También organicé el menú para que sus enlaces pudieran pasar a otra línea cuando fuera necesario.
+
+En el pie de página distribuí tres bloques: marca, contacto y horarios de atención.
+
+Realicé pruebas reduciendo progresivamente el ancho del navegador para comprobar que los elementos no se desbordaran.
+
+Commit: MiniReto 1: organizar encabezado, menú y pie con Flexbox
+
+MiniReto 2. La flota en cuadrícula – Grid
+
+Agregué a la página principal una sección llamada "Nuestra flota", con siete tarjetas de bicicletas:
+
+Bicicleta	Precio por hora
+Urbana Clásica	$10.000
+Urbana Plegable	$12.000
+Montaña Trail	$15.000
+Gravel Aventura	$18.000
+Eléctrica Urbana	$25.000
+Infantil	$8.000
+Tándem	$20.000
+
+Cada tarjeta contiene imagen, nombre, descripción, precio y enlace de reserva.
+
+Utilicé CSS Grid con grid-template-columns, repeat(), auto-fit, minmax() y unidades fr. También incorporé gap para separar las tarjetas.
+
+Dentro de cada tarjeta utilicé Flexbox con dirección de columna y justify-content: space-between para mantener el enlace "Reservar" en la parte inferior.
+
+Comprobé en DevTools que la cuadrícula se reorganizara automáticamente al cambiar el tamaño de pantalla y al incorporar el séptimo modelo.
+
+Commit: MiniReto 2: crear cuadrícula adaptable para la flota de bicicletas
+
+MiniReto 3. Layout en dos dimensiones
+
+Combiné Flexbox y Grid para organizar diferentes secciones del sitio.
+
+Los principales cambios fueron:
+
+Portada: distribución en dos columnas, una para el texto y otra para la imagen, utilizando Grid.
+Galería de rutas: tres tarjetas organizadas en una fila mediante Grid.
+Reservas: distribución en dos columnas con proporción 2:1 para el formulario y la información de contacto.
+Formulario: organización de campos relacionados, como documento y celular, en una misma fila.
+
+También comprobé que el menú, la cuadrícula de bicicletas y las validaciones del formulario siguieran funcionando.
+
+Utilicé Grid para las distribuciones en dos dimensiones y Flexbox para organizar elementos en una sola dimensión, según las necesidades de cada sección.
+
+Commit: MiniReto 3: construir layout general con Flexbox y Grid
+
+MiniReto 4. Rueda Libre v1.5 – Mobile-first
+
+En este último reto adapté el sitio a celulares, tabletas y computadores mediante el enfoque mobile-first.
+
+Organicé los estilos para que la presentación inicial estuviera diseñada para pantallas pequeñas y agregué media queries para pantallas mayores:
+
+Desde 768 px para tabletas.
+Desde 1200 px para computadores.
+
+Apliqué los cambios en la portada, la galería de rutas, las reservas, el encabezado y el pie de página.
+
+En celulares, el nombre del negocio aparece arriba y el menú debajo, centrado. En pantallas más grandes se recupera la distribución horizontal.
+
+También ajusté las imágenes para que no superaran el ancho de sus contenedores y reduje el relleno y el tamaño de letra de las tablas para facilitar su lectura.
+
+Durante las pruebas identifiqué y solucioné los siguientes problemas:
+
+Problema	Solución
+El menú ocupaba demasiado espacio en celulares.	Organicé el nombre arriba y el menú debajo, centrado.
+Algunas imágenes podían superar el ancho disponible.	Ajusté las imágenes al contenedor.
+Las tablas eran difíciles de leer en pantallas pequeñas.	Reduje el relleno y ajusté el tamaño de letra.
+
+Comprobé que el contenido se organizara en una columna en celulares y que las distribuciones de escritorio aparecieran en los anchos correspondientes.
+
+Después publiqué la versión v1.5 mediante GitHub Pages y realicé una comprobación adicional desde un celular real.
+
+Enlace publicado: [Pegar URL de GitHub Pages]
+
+Commit: MiniReto 4: adaptar Rueda Libre a dispositivos móviles con mobile-first
+
+DÍA 5. INTRODUCCIÓN A BOOTSTRAP Y MIGRACIÓN DEL SITIO
+
+MiniRetos 5 al 8 – Evolución hacia Rueda Libre v2.0-beta
+
+Durante esta etapa comencé a utilizar Bootstrap 5.3 para comparar sus herramientas de distribución con el CSS que había desarrollado anteriormente y migrar progresivamente el sitio.
+
+MiniReto 5. La flota en Bootstrap – Primera comparación
+
+Creé la carpeta pruebas/ y dentro el archivo catalogo-bootstrap.html.
+
+Incorporé Bootstrap 5.3 mediante sus enlaces CDN, sin conectar styles.css, para comprobar cómo podía construir la distribución utilizando únicamente el framework.
+
+Copié las siete tarjetas de bicicletas y adapté las rutas relativas de las imágenes.
+
+Utilicé las clases container, row, col-12, col-sm-*, col-lg-* y col-xl-* para crear una cuadrícula adaptable:
+
+Una columna en celulares.
+Dos columnas desde el breakpoint sm.
+Tres columnas desde lg.
+Cuatro columnas desde xl.
+
+También utilicé gutters mediante clases g-* para separar las tarjetas.
+
+Realicé pruebas con DevTools y utilicé un cronómetro para comparar el tiempo de construcción con la versión desarrollada mediante CSS propio.
+
+Aspecto	CSS propio	Bootstrap
+Tiempo invertido	[Completar]	[Completar]
+Código de distribución	[Completar líneas]	Clases de grilla
+Adaptación responsive	Media queries propias	Breakpoints
+Separación	gap	Gutters
+
+Observé que Bootstrap permite construir distribuciones responsive con menos reglas CSS, aunque limita algunas decisiones a las clases y breakpoints que ofrece.
+
+Commit: MiniReto 5: reconstruir la flota utilizando Bootstrap 5.3
+
+MiniReto 6. Sin una línea de CSS – Utilidades
+
+Continué trabajando en pruebas/catalogo-bootstrap.html y agregué la sección "¿Por qué Rueda Libre?", con cuatro beneficios:
+
+Bicicletas revisadas en cada alquiler.
+Casco y candado incluidos.
+Guías certificados.
+Puntos de devolución en tres sedes.
+
+Organicé los beneficios utilizando la grilla de Bootstrap y agregué títulos, descripciones y datos destacados.
+
+También utilicé clases utilitarias para controlar la presentación sin escribir CSS propio:
+
+Clase	Función
+text-center	Centrar texto.
+fw-bold	Aplicar negrita.
+mb-3	Agregar margen inferior.
+d-flex	Crear un contenedor flexible.
+gap-3	Establecer separación.
+
+Agregué una franja de llamada a la acción con el mensaje "¿Listo para rodar?" y un enlace hacia la página de reservas.
+
+Utilicé Flexbox mediante las clases de Bootstrap para organizar el contenido en columna en celulares y en fila desde el breakpoint md. También incorporé un elemento decorativo oculto en celulares y visible desde pantallas medianas.
+
+Comprobé que las clases fueran compatibles con Bootstrap 5.3 y que no existieran estilos escritos directamente en las etiquetas ni bloques CSS adicionales.
+
+Commit: MiniReto 6: crear beneficios y llamada a la acción con utilidades Bootstrap
+
+MiniReto 7. Inicio migra a Bootstrap
+
+Comencé la migración del sitio real incorporando Bootstrap 5.3 en index.html. Mantuve styles.css después de los archivos del framework para conservar la identidad visual de Rueda Libre.
+
+Reemplacé la distribución anterior de la página principal por la grilla y las utilidades de Bootstrap. Migré las siguientes secciones:
+
+Portada principal.
+Nuestra flota con los siete modelos.
+Galería de rutas guiadas.
+Sección de beneficios.
+
+Después revisé styles.css y eliminé las reglas de distribución que ya no eran necesarias para la página de inicio. Conservé los estilos utilizados por tarifas y reservas, además de los colores y las tipografías de la marca.
+
+Durante la migración identifiqué algunos conflictos:
+
+Conflicto	Solución
+Cambios en algunos márgenes.	Ajusté el espaciado mediante utilidades de Bootstrap.
+Cambios en los colores de los enlaces.	Revisé la cascada y los estilos propios.
+Diferencias en los tamaños de texto.	Organicé las clases tipográficas y los estilos.
+
+Resolví estos problemas revisando la especificidad y el orden de carga de las hojas de estilo, sin utilizar !important.
+
+Finalmente comprobé el funcionamiento de la página en diferentes anchos mediante DevTools.
+
+Commit: MiniReto 7: migrar página de inicio a Bootstrap
+
+MiniReto 8. Rueda Libre v2.0-beta – Migración completa
+
+En este reto completé la migración de las páginas restantes.
+
+Página de tarifas
+
+En tarifas.html utilicé la grilla de Bootstrap para organizar las tarifas, los recorridos y la información complementaria.
+
+Organicé las tablas y la información adicional en dos columnas desde el breakpoint lg, conservando los estilos visuales que había desarrollado anteriormente.
+
+Página de reservas
+
+En reservas.html utilicé Bootstrap para distribuir el formulario y la información de contacto en dos columnas con proporción 8/4 desde el breakpoint md.
+
+También utilicé la grilla para ubicar campos cortos relacionados en una misma fila.
+
+Conservé las validaciones nativas implementadas anteriormente, incluyendo campos obligatorios, formatos de correo, longitudes, cantidades y restricciones de fechas.
+
+Limpieza de CSS
+
+Después de migrar las tres páginas revisé nuevamente styles.css y eliminé las reglas de distribución que ahora resolvía Bootstrap.
+
+Conservé principalmente los estilos relacionados con:
+
+Variables de colores y espacios.
+Tipografías.
+Identidad visual.
+Tarjetas.
+Tablas.
+Formularios.
+Estados de enlaces y botones.
+
+Comparación entre versiones
+
+Realicé una comparación entre Rueda Libre v1.5 y v2.0-beta:
+
+Aspecto	v1.5	v2.0-beta
+Distribución	Flexbox y Grid propios	Grilla y utilidades Bootstrap
+Responsive	Media queries propias	Breakpoints Bootstrap
+Estilos	Distribución e identidad visual	Principalmente identidad visual
+Tiempo de desarrollo	[Completar]	[Completar]
+Líneas de styles.css	[Completar]	[Completar]
+
+Identifiqué como ventajas de Bootstrap la rapidez de desarrollo, la reutilización de clases y la facilidad para construir distribuciones adaptables.
+
+También encontré algunas desventajas: es necesario conocer sus clases, algunas decisiones dependen de sus breakpoints, pueden aparecer conflictos con los estilos propios y requiere cargar archivos adicionales.
+
+Pruebas finales
+
+Revisé las tres páginas en diferentes tamaños de pantalla y comprobé:
+
+Funcionamiento de la página principal, tarifas y reservas.
+Carga correcta de imágenes.
+Funcionamiento de enlaces.
+Conservación de las validaciones del formulario.
+Adaptación de las distribuciones.
+Correcta aplicación de los estilos.
+
+Finalmente publiqué Rueda Libre v2.0-beta mediante GitHub Pages y comprobé que las tres páginas pudieran abrirse desde internet.
+
+Enlace publicado: [Pegar URL de GitHub Pages]
+
+Commit: MiniReto 8: completar migración a Bootstrap y publicar Rueda Libre v2.0-beta
+
+MAPA GENERAL DE LOS 20 MINIRETOS
+Día	MiniReto	Aprendizaje o resultado
+1	1	Creación del repositorio y estructura inicial.
+1	2	Contenido e imágenes de la página principal.
+1	3	Página de tarifas y recorridos con tablas.
+1	4	Página de reservas, menú y pie de página.
+2	5	Organización con etiquetas semánticas.
+2	6	Creación del formulario de reservas.
+2	7	Validaciones y navegación con teclado.
+2	8	Accesibilidad y publicación de v0.2.
+3	9	Hoja de estilos, colores y tipografías.
+3	10	Navegación, especificidad y estados CSS.
+3	11	Modelo de caja, tamaños y espacios.
+3	12	Posicionamiento y lanzamiento v1.0.
+4	1	Organización del encabezado, menú y pie con Flexbox.
+4	2	Cuadrícula adaptable para la flota con Grid.
+4	3	Layout general combinando Flexbox y Grid.
+4	4	Diseño responsive con enfoque mobile-first.
+5	5	Construcción de la flota con Bootstrap 5.3.
+5	6	Beneficios y llamada a la acción con utilidades Bootstrap.
+5	7	Migración de la página principal a Bootstrap.
+5	8	Migración completa y publicación de v2.0-beta.
+HERRAMIENTAS Y TECNOLOGÍAS UTILIZADAS
+HTML5: estructura, contenido, tablas, enlaces y formularios.
+CSS3: identidad visual, colores, tipografías, Flexbox, Grid, responsive y posicionamiento.
+JavaScript: tecnología estudiada como base para futuras funcionalidades interactivas.
+Bootstrap 5.3: grillas, breakpoints, componentes y clases utilitarias.
+Visual Studio Code: edición del código.
+Live Server: visualización local del sitio.
+DevTools: inspección de elementos, estilos, dimensiones y solicitudes de red.
+Git: control de versiones.
+GitHub: almacenamiento y administración del repositorio.
+GitHub Pages: publicación del sitio.
+Google Fonts: incorporación de tipografías.
+Verificador de contraste: revisión de accesibilidad visual.
+ESTADO ACTUAL DEL PROYECTO
+
+Rueda Libre v2.0-beta
+
+El proyecto ha evolucionado desde una estructura básica de tres páginas HTML hasta un sitio web con identidad visual propia, formulario de reservas validado, herramientas de accesibilidad, diseño responsive y distribución basada en Bootstrap 5.3.
+
+La siguiente etapa puede enfocarse en perfeccionar la experiencia en dispositivos móviles, mejorar detalles visuales e incorporar funcionalidades para almacenar y consultar las solicitudes de reserva recibidas.
